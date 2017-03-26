@@ -27,7 +27,8 @@ def sendmailto(date_time):
     toaddr = ["kgairola@gmail.com"]
 
     SUBJECT = "!! EMERGENCY AT JOHN DOE !! "
-    TEXT = "EMERGENCY AT JOHN DOE on ", date_time , "at 1234 First Ave, NY" 
+    TEXT = ["EMERGENCY AT JOHN DOE on ", date_time , "at 1234 First Ave, NY"] 
+    TEXT = ''.join(i for i in TEXT)
 
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
     server.starttls()
